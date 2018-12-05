@@ -1,11 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/login", methods=["GET"])
 def login():
-    return render_template("login2.html")
+    if request.method == "GET":
+        return render_template("login2.html")
 
 
 @app.route("/login_action", methods=["POST"])
