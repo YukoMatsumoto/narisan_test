@@ -15,7 +15,7 @@
     {% for entry in entries %}
     <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
         {% else %}
-    <li><em>このページからログインしてね！</em>
+    <li><em>ログイン後に各フォームを記入すると追加されるよ！</em>
         {% endfor %}
 </ul>
 {% endblock %}
