@@ -9,7 +9,25 @@
         <dd><textarea name="text" rows=5 cols=40></textarea>
         <dd><input type="submit" value="追加">
     </dl>
+    <!DOCTYPE html>
+    <!--<html lang='ja'>-->
+    <!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>WebSpeechAPIデモ</title>-->
+
+    <!--</head>-->
+
+
+    <h1 class="text-center h1">音声入力フォーム</h1>
+    <div id="content">
+        <input type="textarea" id="q" name="q" size=60>
+        <input type="button" value="Click to Speak" onclick="recognition.start()">
+    </div>
+
+
+    <!--</html>-->
 </form>
+
 {% endif %}
 <ul class="entries">
     {% for entry in entries %}
