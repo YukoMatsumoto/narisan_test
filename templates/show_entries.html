@@ -10,22 +10,11 @@
         <dd><input type="submit" value="追加">
     </dl>
     <!DOCTYPE html>
-    <!--<html lang='ja'>-->
-    <!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>WebSpeechAPIデモ</title>-->
-
-    <!--</head>-->
-
-
     <h1 class="text-center h1">音声入力フォーム</h1>
     <div id="content">
         <input type="textarea" id="q" name="q" size=60>
-        <input type="button" value="Click to Speak" onclick="recognition.start()">
+        <input type="button" value="ボタンを押して話すと音声出力されるよ" onclick="recognition.start()">
     </div>
-
-
-    <!--</html>-->
 </form>
 
 {% endif %}
@@ -33,7 +22,7 @@
     {% for entry in entries %}
     <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
         {% else %}
-    <li><em>ログイン後に各フォームを記入すると追加されるよ！</em>
+    <li><em>追加したデータは下に表示されていきます</em>
         {% endfor %}
 </ul>
 {% endblock %}
