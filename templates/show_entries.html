@@ -2,19 +2,15 @@
 {% block body %}
 {% if session.logged_in %}
 <form action="{{ url_for('add_entry') }}" method="post" class="add-entry">
+    <!DOCTYPE html>
     <dl>
         <dt>タイトル:
         <dd><input type="text" size=30 name="title">
         <dt>本文:
-        <dd><textarea name="text" rows=5 cols=40></textarea>
-        <dd><input type="submit" value="追加">
+        <dd><textarea name="text" id="q" name="q" rows=5 cols=40></textarea>
+            <input type="button" value="ボタンを押して話すと音声出力されるよ" onclick="recognition.start()">
+        <dd><input type="submit" value="追加（タイトルと本文を入力したらここを押す）">
     </dl>
-    <!DOCTYPE html>
-    <h1 class="text-center h1">音声入力フォーム</h1>
-    <div id="content">
-        <input type="textarea" id="q" name="q" size=60>
-        <input type="button" value="ボタンを押して話すと音声出力されるよ" onclick="recognition.start()">
-    </div>
 </form>
 
 {% endif %}
